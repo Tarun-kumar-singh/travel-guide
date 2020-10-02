@@ -5,7 +5,7 @@ import Loader from './component/loader';
  import Thumbnil from './component/cityThumbnil';
 import CityDetail from './component/cityDetails';
 import Place from './component/places';
-
+import Footer from "./component/footer";
 function App() {
   let dataDisplay = false
   var names = [
@@ -36,6 +36,9 @@ function App() {
         })}
 
      </div>
+     <div>
+       <Footer/>
+       </div>
     </div>   
   );
 }
