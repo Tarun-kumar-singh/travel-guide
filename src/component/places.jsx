@@ -69,7 +69,7 @@ const Place = (props) => {
         <CardContent>
         <Typography paragraph>Address</Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Opp.-Govt. Girls High school, Ashok Rajpath, Patna, Bihar 800001
+            {props.address}
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
@@ -87,8 +87,7 @@ const Place = (props) => {
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph>
-              Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-              minutes.
+             {props.description}
             </Typography>
           </CardContent>
         </Collapse>
