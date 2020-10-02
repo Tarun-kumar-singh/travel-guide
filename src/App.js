@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import HeaderTitle from './component/header';
+ import SearchInput from './component/searchInput';
+import Loader from './component/loader';
+ import Thumbnil from './component/cityThumbnil';
+import CityDetail from './component/cityDetails';
+import Place from './component/places';
 
 function App() {
+  let dataDisplay = false
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <div style={{marginTop:'20px'}}>
+       <HeaderTitle/>
     </div>
+      <SearchInput />
+    <div style={{marginLeft:'23%', display:'none'}}>
+      <Thumbnil/>
+    </div>
+      <CityDetail/>
+    <div>
+         <div>
+           <Place/>
+          </div>
+          <div>
+           <Place/>
+          </div>
+          <div>
+           <Place/>
+          </div>
+          <div>
+           <Place/>
+          </div>
+     </div>
+    </div>   
   );
 }
 
