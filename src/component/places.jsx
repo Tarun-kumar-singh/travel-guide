@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
     
   }));
-const Place = () => {
+const Place = (props) => {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
   
@@ -59,12 +59,12 @@ const Place = () => {
 
        <Card className={classes.root}>
         <CardHeader
-          title="Goal Ghar"
+          title={props.placeName}
         />
         <CardMedia
           className={classes.media}
           image="https://media-cdn.tripadvisor.com/media/photo-m/1280/13/53/f2/b5/golghar-from-outside.jpg"
-          title="goal ghar"
+          title={props.placeName}
         />
         <CardContent>
         <Typography paragraph>Address</Typography>

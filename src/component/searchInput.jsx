@@ -19,12 +19,17 @@ const SearchInput = () => {
             freeSolo
             options={top100Films.map((option) => option.title)}
             renderInput={(params) => (
-              <TextField {...params} label="Search city" margin="normal" variant="outlined"   />
+              <TextField onChange={n()} {...params} label="Search city" margin="normal" variant="outlined"   />
             )}
           /> 
           </div>
        </Grid>
      );
+}
+
+
+const n = () => {
+  console.log('j')
 }
 
 const top100Films = [
