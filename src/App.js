@@ -6,6 +6,8 @@ import Loader from './component/loader';
 import CityDetail from './component/cityDetails';
 import Place from './component/places';
 import Footer from "./component/footer";
+
+
 function App() {
   var names = [
     {name : 'Goal ghar',  address : 'Opp.-Govt. Girls High school, Ashok Rajpath, Patna, Bihar 800001', description: 'According to a contemporary inscription at its base, the Golghar in Patna was intended to be just the first of a series of huge grain stores. In the end, however, no others were ever built. The granary was "part of a general plan … for the perpetual prevention of famine in these provinces. The beehive-shaped structure was designed by Captain John Garstin of the Bengal Engineers, part of the East India Companys Bengal Army. Its construction was completed on 20 July 1786.'}, 
@@ -18,7 +20,8 @@ function App() {
     <div style={{marginTop:'20px'}}>
        <HeaderTitle/>
     </div>
-      <SearchInput />
+      <SearchInput
+       />
     <div style={{marginLeft:'23%', display:'none'}}>
       <Thumbnil/>
     </div>
