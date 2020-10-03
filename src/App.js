@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderTitle from './component/header';
  import SearchInput from './component/searchInput';
 import Loader from './component/loader';
@@ -15,19 +15,24 @@ function App() {
     {name :'mahaveer temple', address : 'CORPORATE OFFICE. M/s Reddy Structures Pvt Ltd. # 133/1, "The Residency" 2nd Floor, Residency Road, Bangalore - 560 025.', description:'As per the Patna High Court judgment in 1948 the temple exists since time immemorial. But from the scrutiny of historical facts and traditions it appears that this temple was originally established by Swami Balanand, an ascetic of Ramanandi sect in around 1730 A.D. This temple gained popularity in 1947 with large number of Hindu refugees coming to Patna after the partition of India. Subsequently, temple was rebuilt as a concrete house at same time. Even this was broken down in 1987 to make a huge marble temple. The idol of Sankat-Mochan stands in it.'}
   ];
 
+  const [isSearch, setIsSearch] = useState(false)
+
   return (
     <div>
     <div style={{marginTop:'20px'}}>
        <HeaderTitle/>
     </div>
       <SearchInput
+        handleSearch = {handleSearch}
        />
     <div style={{marginLeft:'23%', display:'none'}}>
       <Thumbnil/>
     </div>
       <CityDetail/>
+        
     <div>
-     
+    <Loader/>
+
         {names.map(function(el, index){
         return <div key={index}>{
           <Place
@@ -45,4 +50,8 @@ function App() {
   );
 }
 
+const handleSearch = (event) => {
+  console.log(event.target.value)
+  // setIsSearch = true
+}
 export default App;

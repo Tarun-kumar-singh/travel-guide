@@ -15,7 +15,7 @@ const SearchInput = (props) => {
       >
            <div style={{ width: 300 }}>
           <Autocomplete
-            onKeyDown={(event) => handleSearchSubmit(event)}
+            onKeyDown={(event) => props.handleSearch(event)}
             id="free-solo-demo"
             freeSolo
             options={top100Films.map((option) => option.title)}
@@ -32,9 +32,11 @@ const SearchInput = (props) => {
        </Grid>
      );
 }
-const handleSearchSubmit = (event) => {
-console.log(event.target.value)
-}
+
+// const handleSearchSubmit = (event) => {
+// console.log(event.target.value)
+// }
+
 const top100Films = [
    {title : "Patna"},
    {title : "Delhi"},
