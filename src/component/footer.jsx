@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    position:'fixed',
+    bottom:0
   },
   paper: {
     padding: theme.spacing(2),
