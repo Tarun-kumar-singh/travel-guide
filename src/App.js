@@ -15,8 +15,11 @@ function App() {
     {name :'mahaveer temple', address : 'CORPORATE OFFICE. M/s Reddy Structures Pvt Ltd. # 133/1, "The Residency" 2nd Floor, Residency Road, Bangalore - 560 025.', description:'As per the Patna High Court judgment in 1948 the temple exists since time immemorial. But from the scrutiny of historical facts and traditions it appears that this temple was originally established by Swami Balanand, an ascetic of Ramanandi sect in around 1730 A.D. This temple gained popularity in 1947 with large number of Hindu refugees coming to Patna after the partition of India. Subsequently, temple was rebuilt as a concrete house at same time. Even this was broken down in 1987 to make a huge marble temple. The idol of Sankat-Mochan stands in it.'}
   ];
 
-  const [isSearch, setIsSearch] = useState(false)
-
+  let [isSearch, setIsSearch] = useState(false)
+  const handleSearch = (event) => {
+    console.log(event.target.value)
+    setIsSearch(true)
+    }
   return (
     <div>
     <div style={{marginTop:'20px'}}>
@@ -28,30 +31,24 @@ function App() {
     <div style={{marginLeft:'23%', display:'none'}}>
       <Thumbnil/>
     </div>
-      <CityDetail/>
-        
-    <div>
-    <Loader/>
-
-        {names.map(function(el, index){
-        return <div key={index}>{
-          <Place
-            placeName = {el.name}
-            address = {el.address}
-            description = {el.description}
-            />}</div>;
-        })}
-
-     </div>
-     <div>
-       <Footer/>
-       </div>
-    </div>   
+    {
+      isSearch ? <Loader /> :
+      <div>
+        <CityDetail/>  
+            {names.map(function(el, index){
+            return <div key={index}>{
+              <Place
+                placeName = {el.name}
+                address = {el.address}
+                description = {el.description}
+                />}</div>;
+            })}
+      </div>
+     }
+      <Footer/>
+     </div>   
   );
 }
 
-const handleSearch = (event) => {
-  console.log(event.target.value)
-  // setIsSearch = true
-}
+
 export default App;
