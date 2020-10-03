@@ -19,7 +19,12 @@ const SearchInput = () => {
             freeSolo
             options={top100Films.map((option) => option.title)}
             renderInput={(params) => (
-              <TextField onChange={n()} {...params} label="Search city" margin="normal" variant="outlined"   />
+              <TextField
+                 onKeyDown={(eve) => handleSubmit(eve)}
+                 {...params} label="Search city"
+                 margin="normal"
+                 variant="outlined" 
+             />
             )}
           /> 
           </div>
@@ -28,8 +33,8 @@ const SearchInput = () => {
 }
 
 
-const n = () => {
-  console.log('j')
+const handleSubmit = (eve) => {
+  console.log(eve.value)
 }
 
 const top100Films = [

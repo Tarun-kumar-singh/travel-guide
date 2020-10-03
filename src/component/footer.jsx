@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import ButtonBase from '@material-ui/core/ButtonBase';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     <div className={classes.root}>
       <Paper className={classes.paper}>
               <Grid item >
-              <Typography  alignContent="center" variant="subtitle1">Powered By: Travel Guide, India</Typography>
+              <Typography variant="subtitle1">Powered By: Travel Guide, India</Typography>
          </Grid>
       </Paper>
     </div>
