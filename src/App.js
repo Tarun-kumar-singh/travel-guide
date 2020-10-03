@@ -34,7 +34,11 @@ function App() {
     {
       isSearch ? <Loader /> :
       <div>
-        <CityDetail/>  
+        <CityDetail
+          name = {'patna'}
+          state = 'Bihar'
+          description = {'Patna is the capital of Bihar'}
+        />  
             {names.map(function(el, index){
             return <div key={index}>{
               <Place

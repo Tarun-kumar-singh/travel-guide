@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     },
   });
   
-const CityDetail = () => {
+const CityDetail = (props) => {
     const classes = useStyles();
 return(
   <Grid
@@ -37,13 +37,13 @@ return(
     <Card className={classes.root}>
     <CardContent>
       <Typography variant="h5" component="h2">
-            Patna
+            {props.name}
        </Typography>
       <Typography className={classes.pos} color="textSecondary">
-        Bihar
+        {props.state}
       </Typography>
       <Typography variant="body2" component="p">
-        Patna is the capital of the Bihar
+        {props.description}
         <br />
       </Typography>
     </CardContent>
